@@ -36,4 +36,10 @@
 		font-weight: 500;
 		color: var(--white);
 	}
+
+	@media (max-width: 600px) {
+		.text {
+			font-size: 1rem;
+		}
+	}
 </style>
