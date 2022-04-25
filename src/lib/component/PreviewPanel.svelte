@@ -38,7 +38,7 @@
 	.paper {
 		background-color: var(--cornerstone-gray);
 		height: 20rem;
-		transition: all 0.5s ease-in-out
+		transition: aspect-ratio 0.5s ease-in-out
 	}
 
 	.label {

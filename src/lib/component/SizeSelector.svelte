@@ -58,14 +58,13 @@
 		display: grid;
 		grid-template-columns: repeat(2, 18rem);
 		gap: 1rem;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
 	}
 
 	label {
 		box-sizing: content-box;
 		border-radius: 0.25rem;
 		line-height: 2rem;
+		cursor: pointer;
 	}
 
 	input[type='number'] {

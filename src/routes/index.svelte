@@ -2,6 +2,7 @@
 	import SizeSelector from '$lib/component/SizeSelector.svelte';
 	import PreviewPanel from '$lib/component/PreviewPanel.svelte';
 	import AddonSelector from '$lib/component/AddonSelector.svelte';
+	import PriceBreakdown from '$lib/component/PriceBreakdown.svelte';
 
 	export const prerender = true;
 </script>
@@ -11,6 +12,11 @@
 
 	let width: number;
 	let height: number;
+	let mount: boolean;
+	let laminate: boolean;
+	let mountedLamType: string;
+
+	let quantity: number = 1;
 </script>
 
 <section>
@@ -24,8 +30,10 @@
 			<div class="col">
 				<SizeSelector bind:width={width} bind:height={height}/>
 				
-				<h1>Select add-ons</h1>
-				<AddonSelector />
+				<h1>Select add-ons and quantity</h1>
+				<AddonSelector bind:mount={mount} bind:laminate={laminate} bind:mountedLamType={mountedLamType} />
+				<div class="quantity">Quantity: <input class="quantity-input" type="number" bind:value={quantity} min=1></div>
+				<PriceBreakdown width={width} height={height} mount={mount} laminate={laminate} mountedLamType={mountedLamType} quantity={quantity} />
 			</div>
 			<div class="col">
 				<PreviewPanel width={width} height={height}/>
@@ -40,5 +48,13 @@
 	.row {
 		display: flex;
 		flex-direction: row;
+	}
+
+	.quantity {
+		margin-top: 1rem;
+	}
+
+	.quantity-input {
+		width: 6rem;
 	}
 </style>

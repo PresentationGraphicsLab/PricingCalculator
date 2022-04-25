@@ -62,6 +62,7 @@
 	label {
 		box-sizing: content-box;
 		line-height: 2rem;
+		cursor: pointer;
 	}
 
 	.sub-options {
