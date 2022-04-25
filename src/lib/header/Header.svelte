@@ -10,7 +10,7 @@
 				<img src={logo} alt="Institutional Mark" />
 			</a>
 		</div>
-		<div class="text">Presentation & Environmental Graphic Services</div>
+		<div class="text">Presentation and Environmental Graphic Services</div>
 	</nav>
 </header>
 

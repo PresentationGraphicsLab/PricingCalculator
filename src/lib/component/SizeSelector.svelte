@@ -56,7 +56,7 @@
 <style>
 	.size-selector {
 		display: grid;
-		grid-template-columns: repeat(2, 18rem);
+		grid-template-columns: repeat(auto-fill, 16rem);
 		gap: 1rem;
 	}
 
