@@ -12,9 +12,12 @@
 
 	let width: number;
 	let height: number;
+	let print: boolean;
 	let mount: boolean;
 	let laminate: boolean;
 	let mountedLamType: string;
+	let breakdown: string[];
+	let viewBreakdown: boolean;
 
 	let quantity: number = 1;
 </script>
@@ -31,9 +34,9 @@
 				<SizeSelector bind:width={width} bind:height={height}/>
 				
 				<h1>Select add-ons and quantity</h1>
-				<AddonSelector bind:mount={mount} bind:laminate={laminate} bind:mountedLamType={mountedLamType} />
+				<AddonSelector bind:print={print} bind:mount={mount} bind:laminate={laminate} bind:mountedLamType={mountedLamType} />
 				<div class="quantity">Quantity: <input class="quantity-input" type="number" bind:value={quantity} min=1></div>
-				<PriceBreakdown width={width} height={height} mount={mount} laminate={laminate} mountedLamType={mountedLamType} quantity={quantity} />
+				<PriceBreakdown width={width} height={height} print={print} mount={mount} laminate={laminate} mountedLamType={mountedLamType} quantity={quantity} breakdown={breakdown} viewBreakdown={viewBreakdown} />
 			</div>
 			<div class="col preview">
 				<PreviewPanel width={width} height={height}/>

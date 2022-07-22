@@ -1,4 +1,5 @@
 <script lang="ts">
+	export let print: boolean = true;
 	export let mount: boolean = false;
 	export let laminate: boolean = false;
 	export let mountedLamType: string = 'standard';
@@ -9,9 +10,13 @@
 </script>
 
 <div class="addon-selector">
+	<label for="print">
+		<input type="checkbox" id="print" value="Print" on:change={onChange} bind:checked={print} />
+		Printing
+	</label>
 	<label for="mount">
 		<input type="checkbox" id="mount" value="Mount" on:change={onChange} bind:checked={mount} />
-		Add mounting
+		Mounting
 	</label>
 	<label for="laminate">
 		<input
@@ -21,7 +26,7 @@
 			on:change={onChange}
 			bind:checked={laminate}
 		/>
-		Add lamination
+		Lamination
 	</label>
 
 	{#if laminate && mount}
