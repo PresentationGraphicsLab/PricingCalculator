@@ -48,7 +48,8 @@ body {
 	min-height: 100vh;
 	margin: 0;
 	background-color: var(--background-color);
-	color: var(--text-color)
+	color: var(--text-color);
+	overflow-y: overlay;
 }
 
 #svelte {
