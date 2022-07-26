@@ -12,6 +12,8 @@
 		<span class="label">{width > height ? width : height}"</span>
 	</div>
 </div>
+<br />
+Area: <b>{width * height}</b> square inches
 
 <style>
 	.preview-panel {

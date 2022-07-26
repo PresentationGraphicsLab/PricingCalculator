@@ -7,25 +7,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>PGL Pricing Calculator</title>
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-b6af3fb3.css">
-	<link rel="stylesheet" href="/_app/assets/pages/index.svelte-cd761c67.css">
-	<link rel="modulepreload" href="/_app/start-75ecf4c9.js">
-	<link rel="modulepreload" href="/_app/chunks/index-0bb1e59d.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-ceee9dad.js">
-	<link rel="modulepreload" href="/_app/pages/index.svelte-b22b2e11.js">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-df42f114.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/index-752fa051.css">
+	<link rel="modulepreload" href="/_app/immutable/start-13f8262a.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-f98db07c.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-3f6c597d.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/index.svelte-0d2bf844.js">
 	</head>
 	<body>
 		<div>
 
 
-<header><nav class="svelte-psgycb"><div class="logo svelte-psgycb"><a href="/"><img src="/_app/assets/mark-79ae13cc.svg" alt="Institutional Mark" class="svelte-psgycb"></a></div>
+<header><nav class="svelte-psgycb"><div class="logo svelte-psgycb"><a href="/"><img src="/_app/immutable/assets/mark-79ae13cc.svg" alt="Institutional Mark" class="svelte-psgycb"></a></div>
 		<div class="text svelte-psgycb">Presentation and Environmental Graphic Services</div></nav>
 </header>
 
-<main class="svelte-1izrdc8"><section>
+<main class="svelte-1izrdc8"><section><h1>Select a product</h1>
 
-	<div><h1 class="svelte-1344hds">Select a poster size</h1>
-		<div class="row svelte-1344hds"><div class="col main svelte-1344hds"><div class="size-selector svelte-1i52kvo"><label for="18x24" class="svelte-1i52kvo"><input type="radio" id="18x24" name="presetSize" value="18x24">
+	<div class="chips svelte-v0tqiq"><button class="selected chip svelte-v0tqiq">✔ poster
+		</button><button class="chip svelte-v0tqiq">x-frame
+		</button>
+</div>
+
+	<h1>Select a poster size</h1>
+<div class="row svelte-1lay68c"><div class="options svelte-1lay68c"><div slot="options"><div class="size-selector svelte-1i52kvo"><label for="18x24" class="svelte-1i52kvo"><input type="radio" id="18x24" name="presetSize" value="18x24">
 			18&quot; x 24&quot;
 		</label><label for="20x30" class="svelte-1i52kvo"><input type="radio" id="20x30" name="presetSize" value="20x30">
 			20&quot; x 30&quot;
@@ -43,43 +48,43 @@
 	<label for="custom" class="svelte-1i52kvo"><input type="radio" id="custom" name="presetSize" value="custom">
 		Custom size</label>
 </div>
-				
-				<h1 class="svelte-1344hds">Select add-ons and quantity</h1>
-				<div class="addon-selector svelte-eb5zdt"><label for="print" class="svelte-eb5zdt"><input type="checkbox" id="print" value="Print" checked>
-		Printing
-	</label>
-	<label for="mount" class="svelte-eb5zdt"><input type="checkbox" id="mount" value="Mount">
-		Mounting
-	</label>
-	<label for="laminate" class="svelte-eb5zdt"><input type="checkbox" id="laminate" value="Laminate">
-		Lamination
-	</label>
 
+		<h1>Select poster options</h1>
+		<div class="options-group"><label for="print" class="svelte-7v03an"><input type="checkbox" id="print" value="Printing" checked>
+	Printing
+	<div class="sub-options svelte-7v03an"></div>
+</label>
+			<label for="mount" class="svelte-7v03an"><input type="checkbox" id="mount" value="Mounting">
+	Mounting
 	
+</label>
+			<label for="laminate" class="svelte-7v03an"><input type="checkbox" id="laminate" value="Lamination">
+	Lamination
+	
+</label></div>
+		<div class="quantity svelte-xqzlkv">Quantity: <input class="quantity-input svelte-xqzlkv" type="number" min="1" value="1">
 </div>
-				<div class="quantity svelte-1344hds">Quantity: <input class="quantity-input svelte-1344hds" type="number" min="1" value="1"></div>
-				<div class="price-breakdown svelte-tmiiec"><label for="view-breakdown" class="svelte-tmiiec"><input type="checkbox" id="view-breakdown" value="Price breakdown">
-		View price breakdown
+		<div class="price-breakdown svelte-tmiiec"><label for="view-breakdown" class="svelte-tmiiec"><input type="checkbox" id="view-breakdown" value="Price breakdown">
+		View unit price breakdown
 	</label>
 	<h2 class="svelte-tmiiec">Total cost: $36 </h2>
 	
-</div></div>
-			<div class="col preview svelte-1344hds"><div class="preview-panel svelte-11ta6cu"><div class="col svelte-11ta6cu"><div class="paper svelte-11ta6cu" style="aspect-ratio: 24 / 36"></div>
+</div></div></div>
+    <div class="preview svelte-1lay68c"><div slot="preview"><div class="preview-panel svelte-11ta6cu"><div class="col svelte-11ta6cu"><div class="paper svelte-11ta6cu" style="aspect-ratio: 24 / 36"></div>
 		<span class="label svelte-11ta6cu">24&quot;</span></div>
-	<div class="height-label svelte-11ta6cu"><span class="label svelte-11ta6cu">36&quot;</span></div>
+	<div class="height-label svelte-11ta6cu"><span class="label svelte-11ta6cu">36&quot;</span></div></div>
+<br>
+Area: <b>864</b> square inches</div></div>
 </div>
-				<br>
-				Area: <b>864</b> square inches
-			</div></div></div>
 </section></main>
 
 <footer class="svelte-1izrdc8"></footer>
 
 
-		<script type="module" data-hydrate="15qfgvy">
-		import { start } from "/_app/start-75ecf4c9.js";
+		<script type="module" data-sveltekit-hydrate="oet3sf">
+		import { start } from "/_app/immutable/start-13f8262a.js";
 		start({
-			target: document.querySelector('[data-hydrate="15qfgvy"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="oet3sf"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -88,10 +93,7 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-ceee9dad.js"),
-						import("/_app/pages/index.svelte-b22b2e11.js")
-				],
+				nodes: [0, 2],
 				params: {},
 				routeId: ""
 			}

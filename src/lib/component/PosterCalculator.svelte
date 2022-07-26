@@ -1,19 +1,64 @@
 <script lang="ts">
-	export let selected: string;
-	export let options: string[];
+	import CalculatorPane from '$lib/component/CalculatorPane.svelte';
+	import Checkbox from '$lib/component/Checkbox.svelte';
+	import PreviewPanel from '$lib/component/PreviewPanel.svelte';
+	import PosterPriceBreakdown from '$lib/component/PosterPriceBreakdown.svelte';
+    import QuantityInput from '$lib/component/QuantityInput.svelte';
+	import RadioGroup from '$lib/component/RadioGroup.svelte';
+	import SizeSelector from '$lib/component/SizeSelector.svelte';
 
-	function handleClick(option: string): any {
-		selected = option;
-	}
+	let width: number;
+	let height: number;
+	let print: boolean = true;
+	let mount: boolean = false;
+	let laminate: boolean = false;
+	let mountedLamType: string = 'standard';
+	export let total: number;
+	export let breakdown: string[];
+	export let viewBreakdown: boolean;
+
+	export let quantity: number = 1;
 </script>
 
-<div class="chips">
-	{#each options as option}
-		<button class={selected === option ? "selected chip" : "chip"} on:click={handleClick(option)}>
-			{selected === option ? ("✔ " + option) : option}
-		</button>
-	{/each}
-</div>
+<h1>Select a poster size</h1>
+<CalculatorPane>
+	<div slot="options">
+		<SizeSelector bind:width bind:height />
+
+		<h1>Select poster options</h1>
+		<div class="options-group">
+			<Checkbox id="print" name="Printing" bind:selected={print} />
+			<Checkbox id="mount" name="Mounting" bind:selected={mount} />
+			<Checkbox id="laminate" name="Lamination" bind:selected={laminate}>
+				{#if mount}
+					<RadioGroup
+						bind:selected={mountedLamType}
+						options={[
+							['standard', 'Standard'],
+							['deep-crystal', 'Deep Crystal']
+						]}
+					/>
+				{/if}
+			</Checkbox>
+		</div>
+		<QuantityInput {quantity} />
+		<PosterPriceBreakdown
+			{width}
+			{height}
+			{print}
+			{mount}
+			{laminate}
+			{mountedLamType}
+			{quantity}
+			{total}
+			{breakdown}
+			{viewBreakdown}
+		/>
+	</div>
+	<div slot="preview">
+		<PreviewPanel {width} {height} />
+	</div>
+</CalculatorPane>
 
 <style>
 </style>

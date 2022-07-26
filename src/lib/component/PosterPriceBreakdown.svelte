@@ -66,12 +66,12 @@
 		calculateMaterialCost(width, height, print, mount, laminate, mountedLamType);
 		calculateLaborCost(width, height, print, mount, laminate, mountedLamType);
 		var volumeMultiplier = calculateVolumeMultiplier(quantity);
-		breakdown.push("------------------------------");
+		breakdown.push("");
 		breakdown.push("Unit subtotal: $" + runningBreakdown);
 		if (volumeMultiplier != 1) {
 			breakdown.push("-" + (100 - (volumeMultiplier * 100)) + "% volume discount");
 		}
-		breakdown.push("------------------------------");
+		breakdown.push("");
 		breakdown.push("Total unit price: $" + runningBreakdown * volumeMultiplier);
 		return Math.ceil(total);
 	}
