@@ -41,7 +41,7 @@
 				{/if}
 			</Checkbox>
 		</div>
-		<QuantityInput {quantity} />
+		<QuantityInput bind:quantity={quantity} />
 		<PosterPriceBreakdown
 			{width}
 			{height}

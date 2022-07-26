@@ -21,10 +21,10 @@
 <CalculatorPane>
 	<div slot="options">
 		<div class="options-group">
-			<Checkbox id="print" name="Print" bind:selected={print} />
+			<Checkbox id="print" name="Printing" bind:selected={print} />
 			<Checkbox id="hardware" name="Hardware" bind:selected={hardware} />
 		</div>
-		<QuantityInput {quantity} />
+		<QuantityInput bind:quantity={quantity} />
 		<XframePriceBreakdown
 			{print}
 			{hardware}

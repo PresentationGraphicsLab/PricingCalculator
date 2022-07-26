@@ -67,12 +67,13 @@
 		calculateLaborCost(width, height, print, mount, laminate, mountedLamType);
 		var volumeMultiplier = calculateVolumeMultiplier(quantity);
 		breakdown.push("");
-		breakdown.push("Unit subtotal: $" + runningBreakdown);
+		breakdown.push("Unit subtotal: $" + round(runningBreakdown));
 		if (volumeMultiplier != 1) {
-			breakdown.push("-" + (100 - (volumeMultiplier * 100)) + "% volume discount");
+			breakdown.push("-" + round(100 - (volumeMultiplier * 100)) + "% volume discount");
 		}
 		breakdown.push("");
-		breakdown.push("Total unit price: $" + runningBreakdown * volumeMultiplier);
+		var totalUnitPrice = runningBreakdown * volumeMultiplier;
+		breakdown.push("Total unit price: $" + round(totalUnitPrice) + (!isWhole(totalUnitPrice) ? " ≈ $" + Math.ceil(totalUnitPrice) : ""));
 		return Math.ceil(total);
 	}
 
@@ -81,10 +82,19 @@
 		if (typeof multiplier !== 'undefined') {
 			amount = amount * multiplier;
 		}
-		breakdown.push(label + ": $"+ amount);
+		breakdown.push(label + ": $"+ round(amount));
 		runningBreakdown += amount;
 		total += amount * calculateVolumeMultiplier(quantity);
 		return value;
+	}
+
+	function round(x: number): string {
+		var rounded = (Math.round((x + Number.EPSILON) * 100) / 100);
+		return isWhole(rounded) ? rounded.toString() : rounded.toFixed(2);
+	}
+
+	function isWhole(x: number): boolean {
+		return x % 1 == 0;
 	}
 </script>
 

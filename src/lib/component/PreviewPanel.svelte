@@ -40,7 +40,7 @@ Area: <b>{width * height}</b> square inches
 	.paper {
 		background-color: var(--cornerstone-gray);
 		height: 20rem;
-		transition: aspect-ratio 0.5s ease-in-out
+		transition: aspect-ratio 0.5s ease-in-out;
 	}
 
 	.label {

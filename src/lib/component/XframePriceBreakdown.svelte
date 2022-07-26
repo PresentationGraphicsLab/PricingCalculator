@@ -10,7 +10,7 @@
 		breakdown = [];
 		total = 0;
 		if (print) {
-			total = total + logBreakdown('Print', 75);
+			total = total + logBreakdown('Printing', 75);
 		}
 		if (hardware) {
 			total = total + logBreakdown('Hardware', 55);
