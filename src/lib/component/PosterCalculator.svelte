@@ -16,6 +16,7 @@
 	export let total: number;
 	export let breakdown: string[];
 	export let viewBreakdown: boolean;
+	export let coroplast: boolean;
 
 	export let quantity: number = 1;
 </script>
@@ -25,22 +26,24 @@
 	<div slot="options">
 		<SizeSelector bind:width bind:height />
 
-		<h1>Select poster options</h1>
-		<div class="options-group">
-			<Checkbox id="print" name="Printing" bind:selected={print} />
-			<Checkbox id="mount" name="Mounting" bind:selected={mount} />
-			<Checkbox id="laminate" name="Lamination" bind:selected={laminate}>
-				{#if mount}
-					<RadioGroup
-						bind:selected={mountedLamType}
-						options={[
-							['standard', 'Standard'],
-							['deep-crystal', 'Deep Crystal']
-						]}
-					/>
-				{/if}
-			</Checkbox>
-		</div>
+		{#if !coroplast}
+			<h1>Select poster options</h1>
+			<div class="options-group">
+				<Checkbox id="print" name="Printing" bind:selected={print} />
+				<Checkbox id="mount" name="Mounting" bind:selected={mount} />
+				<Checkbox id="laminate" name="Lamination" bind:selected={laminate}>
+					{#if mount}
+						<RadioGroup
+							bind:selected={mountedLamType}
+							options={[
+								['standard', 'Standard'],
+								['deep-crystal', 'Deep Crystal']
+							]}
+						/>
+					{/if}
+				</Checkbox>
+			</div>
+		{/if}
 		<QuantityInput bind:quantity={quantity} />
 		<PosterPriceBreakdown
 			{width}
@@ -53,6 +56,7 @@
 			{total}
 			{breakdown}
 			{viewBreakdown}
+			basePrice={coroplast ? 50 : 28}
 		/>
 	</div>
 	<div slot="preview">

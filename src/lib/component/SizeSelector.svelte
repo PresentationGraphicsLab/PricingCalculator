@@ -2,6 +2,7 @@
 	const MAX_WIDTH = 59;
 	const MAX_LENGTH = 600;
 	var presetSizes: [number, number][] = [
+		[12, 18],
 		[18, 24],
 		[20, 30],
 		[22, 28],

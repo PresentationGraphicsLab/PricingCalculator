@@ -9,6 +9,7 @@
 	export let breakdown: string[];
 	export let total: number;
 	export let viewBreakdown: boolean;
+	export let basePrice: number;
 	
 	let runningBreakdown: number;
 
@@ -21,10 +22,10 @@
 		var cost = 0;
 		const standardMultiplier = calculateStandardRatio(width, height);
 		if (print) {
-			cost = cost + logBreakdown('Print material', 28, standardMultiplier);
+			cost = cost + logBreakdown('Print material', basePrice, standardMultiplier);
 		}
 		if (mount) {
-			cost = cost + logBreakdown('Mount material', 28, standardMultiplier);
+			cost = cost + logBreakdown('Mount material', basePrice, standardMultiplier);
 			if (laminate) {
 				if (mountedLamType === 'standard') {
 					cost = cost + logBreakdown('Lamination material', 6, standardMultiplier);
