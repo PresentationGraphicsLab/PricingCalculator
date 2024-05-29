@@ -10,10 +10,10 @@
 		breakdown = [];
 		total = 0;
 		if (print) {
-			total = total + logBreakdown('Printing', 75);
+			total = total + logBreakdown('Printing', 80);
 		}
 		if (hardware) {
-			total = total + logBreakdown('Hardware', 55);
+			total = total + logBreakdown('Hardware', 60);
 		}		
 		breakdown.push("");
 		breakdown.push("Total unit price: $" + total);
