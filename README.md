@@ -1,6 +1,6 @@
 # [PGL Pricing Calculator](https://pgl.mckeeverwatts.com/)
 
-**The page is a work in progress and is not intended to be used seriously at this time.** 
+**The page is a work in progress.** 
 
 ## Development
 
