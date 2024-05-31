@@ -1,10 +1,10 @@
 {
   "src/lib/header/mark.svg": {
-    "file": "_app/immutable/assets/mark-79ae13cc.svg",
+    "file": "_app/immutable/assets/mark-94657fe0.svg",
     "src": "src/lib/header/mark.svg"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-bf718332.js",
+    "file": "_app/immutable/start-50d74209.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -17,7 +17,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "_app/immutable/pages/__layout.svelte-748afae8.js",
+    "file": "_app/immutable/pages/__layout.svelte-8bb5470a.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -28,11 +28,11 @@
       "_app/immutable/assets/__layout-dafd2ab9.css"
     ],
     "assets": [
-      "_app/immutable/assets/mark-79ae13cc.svg"
+      "_app/immutable/assets/mark-94657fe0.svg"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "_app/immutable/error.svelte-01b52933.js",
+    "file": "_app/immutable/error.svelte-fc60ee1e.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -41,7 +41,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "_app/immutable/pages/index.svelte-56475a97.js",
+    "file": "_app/immutable/pages/index.svelte-2ed41038.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -55,12 +55,12 @@
   "_index-f98db07c.js": {
     "file": "_app/immutable/chunks/index-f98db07c.js"
   },
-  "src/routes\\__layout.css": {
-    "file": "_app/immutable/assets/__layout-dafd2ab9.css",
-    "src": "src/routes\\__layout.css"
-  },
-  "src/routes\\index.css": {
+  "src/routes/index.css": {
     "file": "_app/immutable/assets/index-6c203939.css",
-    "src": "src/routes\\index.css"
+    "src": "src/routes/index.css"
+  },
+  "src/routes/__layout.css": {
+    "file": "_app/immutable/assets/__layout-dafd2ab9.css",
+    "src": "src/routes/__layout.css"
   }
 }
